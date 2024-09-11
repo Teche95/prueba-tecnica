@@ -1,0 +1,23 @@
+
+cosas a hacer en el backend:
+
+agregar una ruta de ver los detalles del personaje: /:id ✅
+consumir api de rick and morty y guardar en la base de datos ✅
+crear funcion para traer los personajes de la base de datos ✅
+hacer la funcion para editar un personaje ✅
+hacer la funcion para borrar un personaje ✅
+hacer la funcion para ver los detalles del personaje ✅
+
+cosas para hacer en el frontend:
+
+formulario y logica de editar ✅
+formulario y logica de add ✅
+pagina de detalles y logica ✅
+estilos
+
+
+
+
+
+
+
