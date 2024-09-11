@@ -2,7 +2,6 @@
 import { Button, Label, TextInput } from "flowbite-react";
 import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
-// import Link from "next/link";
 
 interface EditProps {
   name: string;

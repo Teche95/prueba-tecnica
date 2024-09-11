@@ -92,8 +92,6 @@ export const addCharactersInDB = async (req: Request, res: Response) => {
             return res.status(500).json({ message: "Internal Server Error", error: error.message });
     }
 
-
-
 }
 
 export const showAllChar = async (req: Request, res: Response) => {
@@ -152,7 +150,6 @@ export const createCharacter = async (req: Request, res: Response) => {
         console.log(error)
     }
 
-    // console.log(newCharacter)
     res.send("postCharacter")
 }
 
@@ -163,7 +160,6 @@ export const putCharacter = async (req: Request, res: Response) => {
             new: true
         })
         if (!findCharAndUpdate) return res.status(400).json({ msg: 'Personaje no encontrado' })
-        // console.log("findCharAndUpdate", findCharAndUpdate)
         return res.json(findCharAndUpdate)
     } catch (error) {
         return res.status(500).json({ message: error });
@@ -177,21 +173,10 @@ export const deleteCharacter = async (req: Request, res: Response) => {
         const deleteCharacterById = await Personajes.findByIdAndDelete(req.params.id)
         if (!deleteCharacterById) return res.status(400).json({ msg: 'Personaje no encontrado' })
         return res.json(deleteCharacterById)
-        // console.log(deleteCharacterById)
     } catch (error) {
         return res.status(500).json({ message: error });
     }
 }
-
-// export const getDetailsCharacter = (req: Request, res: Response) => {
-
-//     try {
-//         const characterDetails = Personajes.findById(req.params.id)
-
-//     } catch (error) {
-
-//     }
-// }
 
 export const getCharacterById = async (req: Request, res: Response) => {
     try {

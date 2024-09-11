@@ -17,6 +17,5 @@ router.put("/character/:id", putCharacter)
 
 router.delete("/character/:id", deleteCharacter)
 
-// router.get("/character/detail/:id", getDetailsCharacter)
 
 export default router

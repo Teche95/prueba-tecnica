@@ -20,13 +20,8 @@ interface CardCharacterProps {
   onEdit: (id: string) => void
 }
 const CardCharacter = ({ data, onDelete, onEdit }: CardCharacterProps) => {
-  // console.log(data, "data")
+  
   const navigate = useNavigate()
-
-  // if (!data || data.length === 0) {
-  //   return <div>No characters available</div>;
-  // }
-
 
   return (
     <div className="flex justify-center">

@@ -13,7 +13,6 @@ interface AddProps {
 }
 export const AddCharacter = () => {
 
-  // const { id } = useParams<{ id: string }>();
   const navigate = useNavigate();
 
   const [formData, setFormData] = useState<AddProps>({
@@ -24,23 +23,6 @@ export const AddCharacter = () => {
     origin: '',
     image: '',
   });
-
-  // useEffect(() => {
-  //   try {
-  //     const fetchData = async (id: string) => {
-  //       const response = await fetch(`http://localhost:3000/api/character/detail/${id}`);
-  //       const data = await response.json();
-  //       console.log(data, "data")
-  //       setFormData(data);
-  //     };
-  //     fetchData(id as string);
-  //   } catch (error) {
-  //     console.error(error);
-  //   }
-
-  // }, [])
-
-
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
