@@ -1,13 +1,12 @@
 import mongoose from "mongoose";
-// import dotenv from "dotenv";
-// dotenv.config();
+
 export const conectDb = async () => {
 
     try {
         const DB_URI = process.env.DB_URI
     
         if (!DB_URI) {
-          throw new Error("DB_URI is not defined in environment variables");
+          throw new Error("DB_URI no esta defininida en el archivo .env");
         }
     
         await mongoose.connect(DB_URI);

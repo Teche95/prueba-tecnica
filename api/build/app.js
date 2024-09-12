@@ -9,6 +9,7 @@ const cors_1 = __importDefault(require("cors"));
 const characters_routes_1 = __importDefault(require("./Routes/characters.routes"));
 const swagger_ui_express_1 = __importDefault(require("swagger-ui-express"));
 const swagger_1 = __importDefault(require("./docs/swagger"));
+const dotenv_1 = __importDefault(require("dotenv"));
 const app = (0, express_1.default)();
 app.use((0, morgan_1.default)("dev"));
 app.use(express_1.default.json());
@@ -17,5 +18,6 @@ app.use((0, cors_1.default)({
     origin: 'http://localhost:5173',
     credentials: true,
 }));
+dotenv_1.default.config();
 app.use("/api", characters_routes_1.default);
 exports.default = app;

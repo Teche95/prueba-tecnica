@@ -144,7 +144,6 @@ const createCharacter = (req, res) => __awaiter(void 0, void 0, void 0, function
     catch (error) {
         console.log(error);
     }
-    // console.log(newCharacter)
     res.send("postCharacter");
 });
 exports.createCharacter = createCharacter;
@@ -155,7 +154,6 @@ const putCharacter = (req, res) => __awaiter(void 0, void 0, void 0, function* (
         });
         if (!findCharAndUpdate)
             return res.status(400).json({ msg: 'Personaje no encontrado' });
-        // console.log("findCharAndUpdate", findCharAndUpdate)
         return res.json(findCharAndUpdate);
     }
     catch (error) {
@@ -169,19 +167,12 @@ const deleteCharacter = (req, res) => __awaiter(void 0, void 0, void 0, function
         if (!deleteCharacterById)
             return res.status(400).json({ msg: 'Personaje no encontrado' });
         return res.json(deleteCharacterById);
-        // console.log(deleteCharacterById)
     }
     catch (error) {
         return res.status(500).json({ message: error });
     }
 });
 exports.deleteCharacter = deleteCharacter;
-// export const getDetailsCharacter = (req: Request, res: Response) => {
-//     try {
-//         const characterDetails = Personajes.findById(req.params.id)
-//     } catch (error) {
-//     }
-// }
 const getCharacterById = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     try {
         const character = yield personajes_models_1.default.findById(req.params.id);
