@@ -1,11 +1,19 @@
 import mongoose from "mongoose";
-
+// import dotenv from "dotenv";
+// dotenv.config();
 export const conectDb = async () => {
+
     try {
-        await mongoose.connect("mongodb://localhost/prueba-tecnica");
+        const DB_URI = process.env.DB_URI
+    
+        if (!DB_URI) {
+          throw new Error("DB_URI is not defined in environment variables");
+        }
+    
+        await mongoose.connect(DB_URI);
         console.log("Base de datos conectada");
-    } catch (error) {
+      } catch (error) {
         console.error("Error al conectar con la base de datos:", error);
-        process.exit(1);  
-    }
+        process.exit(1); 
+      }
 }

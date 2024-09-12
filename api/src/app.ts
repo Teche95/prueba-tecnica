@@ -4,7 +4,7 @@ import cors from "cors";
 import characterRoutes from "./Routes/characters.routes";
 import swaggerUi from "swagger-ui-express";
 import specs from "./docs/swagger";
-
+import dotenv from "dotenv";
 
 const app = express();
 
@@ -15,6 +15,7 @@ app.use(cors({
     origin: 'http://localhost:5173',
     credentials: true,
 }));
+dotenv.config();
 
 app.use("/api", characterRoutes)
 
