@@ -28,7 +28,7 @@ Inicia la aplicación: `npm run dev`.
 
 - Edición y eliminación: Se incluyen botones para editar o eliminar un personaje directamente desde la tarjeta.
 - Carga dinámica de personajes: Existe un botón para cargar más personajes, ejecutando una llamada al servidor y refrescando la lista de personajes mostrados.
-- Interfaz amigable: Se utiliza la biblioteca Flowbite para el diseño visual de los componentes, ofreciendo una interfaz moderna y responsiva.
+- Interfaz amigable: Se utiliza la biblioteca Flowbite para el diseño visual de los componentes, ofreciendo una interfaz moderna.
 
 
 ## Tecnologías
